@@ -26,12 +26,12 @@
             #main {
                 font-size: 150px;
                 font-weight: bold;
-                color: black;  
+                color: black;
 	    }
             #subtitle {
                 font-size: 20px;
                 font-weight: bold;
-                color: black;   
+                color: black;
             }
             #info {
                 padding: 5px;
@@ -64,7 +64,7 @@
             </tr>
         </table>
         <div id="footer">
-            Made by 
+            Made by
             <a href="https://github.com/wrose100">
             Will Rose
             </a>
@@ -78,16 +78,16 @@
 	};
 
 	function yes() {
-		
+
 		main.innerHTML = "YES";
-		subtitle.nnerHTML = "It is artisan taco night!"
+		subtitle.innerHTML = "It is artisan taco night!"
 		document.body.style.backgroundImage = "url('tacos.gif')";
 		main.style.color = "white";
 		subtitle.style.color = "white";
-		main.style.textShadow =  "5px 5px 5px #000"; 
-		subtitle.style.textShadow =  "2px 2px 2px #000"; 
+		main.style.textShadow =  "5px 5px 5px #000";
+		subtitle.style.textShadow =  "2px 2px 2px #000";
 	};
-          function getTaco() { 
+          function getTaco() {
             var today = new Date();
 
 		if (today.getDay() === 1) {
@@ -99,15 +99,15 @@
 				var DONE = 4; // readyState 4 means the request is done.
 				var OK = 200; // status 200 is a successful return.
 				if (xhr.readyState === DONE) {
-					if (xhr.status === OK) 
+					if (xhr.status === OK)
 						res = xhr.responseText;
 						if (res.search('YES') >= 0) {
 							yes();
 						} else {
 							no();
 						}
-							
-				} 
+
+				}
 			};
 		} else {
 			no();
