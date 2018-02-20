@@ -86,7 +86,7 @@
                 }
             }
             
-            var diffDays =  Math.floor(( nextFriday - today ) / 86400000);
+            var diffDays =  Math.floor(( nextFriday[0] - today ) / 86400000);
             
             if (diffDays === 0) {
                 document.getElementById("main").innerHTML = "YES";
